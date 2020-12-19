@@ -1,0 +1,78 @@
+Pruebas IDM - Daniel Rodríguez Población
+
+Bisiestos
+---------------------------------------------------------------------------------------------
+
+1. Identificar el Software Under Test
+	En este caso se trata de probar un programa de Java que nos dice si un año es bisiesto o no.
+
+2. Identificar los parámetros del SUT
+	Tenemos una único parámetro: int año, que será el año que queremos saber si es bisiesto.
+
+3. Utilizando la técnica de la modelización de las entradas, crear caracterizaciones basadas en la funcionalidad, y sus particiones en bloques.
+	Consideraciones para que un año sea bisiesto
+	1. Años positivos divisibles entre 4 y no entre 100 = Bisiesto
+	2. Años positivos divisibles entre 4, entre 100 y entre 400 = Bisiesto
+	3. Resto de años: negativos, 0,positivos no divisibles entre 4, o positivos divisibles entre 4 y entre 100 pero no entre 400 = No bisiestos
+
+4. Elegir valores adecuados de cada bloque que satisfagan alguno de los criterios de cobertura “razonables” vistos en clase, prestando atención a los casos frontera que pueda haber en cada caso a la hora de elegir valores concretos para los tests.
+	1. Años: 2008, 2012, 2016...
+	2. Años: 1600, 2000, 2400...
+	3. Años: -2, 1732, 0...
+
+Números Romanos
+---------------------------------------------------------------------------------------------
+1. Identificar el Software Under Test
+	Para este caso, tenemos un programa de Java que convierte números romanos a números decimales.
+
+2. Identificar los parámetros del SUT
+	Un único parámetro que es el string a convertir a decimal.
+
+3. Utilizando la técnica de la modelización de las entradas, crear caracterizaciones basadas en la funcionalidad, y sus particiones en bloques.
+	Consideraciones para que un número sea romano
+	1. null, es decir, el string vacío.
+	2. string que sea romano.
+	3. string que no sea romano.
+
+4. Elegir valores adecuados de cada bloque que satisfagan alguno de los criterios de cobertura “razonables” vistos en clase, prestando atención a los casos frontera que pueda haber en cada caso a la hora de elegir valores concretos para los tests.
+	Valores:
+	1. el string vacío.
+	2. XCIX, MM, XI.
+	3. XD, FGC, IIIIIIII.
+
+Embotelladora
+---------------------------------------------------------------------------------------------
+1. Identificar el Software Under Test
+	Es un programa que dado un número de botellas grandes y pequeñas, y un total de litros, devuelve el número de botellas necesarias, o si no fuera posible embotellar todos los litros, retorna NoSolution.
+
+2. Identificar los parámetros del SUT
+	Tres parámetros enteros, para el número de botellas grandes, el de pequeñas y el total de litros a repartir.
+
+3. Utilizando la técnica de la modelización de las entradas, crear caracterizaciones basadas en la funcionalidad, y sus particiones en bloques.
+	1. Tener en cuenta que no podemos tener ningún parámetro negativo.
+	2. Pueden faltar, lo que arroja NoSolution.
+	3. Pueden sobrar botellas, lo cual daría una solución.
+	4. Si no tenemos botellas de algún tipo, se considera correcto.
+
+4. Elegir valores adecuados de cada bloque que satisfagan alguno de los criterios de cobertura “razonables” vistos en clase, prestando atención a los casos frontera que pueda haber en cada caso a la hora de elegir valores concretos para los tests.
+	En los test los casos de prueba:
+	1. Faltan botellas: 5 litros, 2 botellas pequeñas y 0 grandes
+	2. Sobran botellas: 7 litros, 0 botellas pequeñas y 2 grandes
+
+Descuento BlackFriday
+---------------------------------------------------------------------------------------------
+1. Identificar el Software Under Test
+	Se trata de un programa, que dados un precio, un descuento y un día (formato java calendar), te calcula el descuento final si el día es el 29 de noviembre, Black Friday.
+
+2. Identificar los parámetros del SUT
+	Los tres parámetros son el precio, el descuento y el día.
+
+3. Utilizando la técnica de la modelización de las entradas, crear caracterizaciones basadas en la funcionalidad, y sus particiones en bloques.
+	1. El precio es 0 o negativo.
+	2. El descuento no está entre el 0% y el 100%.
+	3. Si no es BlackFriday, no se aplica el descuento.
+
+4. Elegir valores adecuados de cada bloque que satisfagan alguno de los criterios de cobertura “razonables” vistos en clase, prestando atención a los casos frontera que pueda haber en cada caso a la hora de elegir valores concretos para los tests.
+	1. Precio de -100€
+	2. Descuento de -25% (damos por hecho que se resta aun que sea positivo)
+	3. Es el día 29 de octubre, y no de noviembre.

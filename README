@@ -1,0 +1,11 @@
+INSTRUCCIONES
+
+Mostramos un ejemplo de cómo compilar y ejecutar los tests para el caso del programa NumZero:
+
+1) cd NumZero
+2) javac NumZero.java
+3) javac -cp ../hamcrest-core-1.3.jar:../junit-4.12.jar:. NumZeroTest.java
+4) javac -cp ../hamcrest-core-1.3.jar:../junit-4.12.jar:. AllTests.java
+5) java  -cp ../hamcrest-core-1.3.jar:../junit-4.12.jar:. AllTests
+
+
